@@ -1,0 +1,5 @@
+/* ========== 1. 使用vue-cli3创建项目 ========== */
+
+vue-cli 3.0 与 vue-cli 2.0 相比，不需要书写复杂的 webpack 配置
+
+.editorconfig 文件是 vscode 编辑器的配置文件，需要配合 EditorConfig for VS Code 插件来使用
