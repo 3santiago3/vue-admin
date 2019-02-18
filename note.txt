@@ -3,3 +3,10 @@
 vue-cli 3.0 与 vue-cli 2.0 相比，不需要书写复杂的 webpack 配置
 
 .editorconfig 文件是 vscode 编辑器的配置文件，需要配合 EditorConfig for VS Code 插件来使用
+
+项目创建时，@ 代表 '/src'，_c 代表 '/src/components'，默认就可以用的
+
+vue.config.js 文件里的 publicPath（以前是baseUrl）字段表示的是根目录，比如说，publicPath 设置为 '/app'，那么根目录就是 '/app'，BASE_URL（process.env.BASE_URL） 也变成了 '/app'
+
+/* ========== 2. 路由基础篇 ========== */
+路由懒加载节省流量，与不使用路由懒加载比较，在浏览器 network 上没有体现出来？
