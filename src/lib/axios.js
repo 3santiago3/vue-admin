@@ -26,6 +26,7 @@ class HttpRequest {
         // 如果没有在 loading，则添加 loading
         // Spin.show()
       }
+
       this.queue[url] = true
       return config
     }, error => {
