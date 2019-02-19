@@ -1,3 +1,5 @@
-export default {
-  //
+const state = {
+  // ...
 }
+
+export default state
