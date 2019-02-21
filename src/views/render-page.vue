@@ -14,7 +14,7 @@ export default {
   components: {
     List
   },
-  data() {
+  data () {
     return {
       list: [
         { name: 'lison' },
@@ -24,7 +24,7 @@ export default {
     }
   },
   methods: {
-    renderFunc(h, name) {
+    renderFunc (h, name) {
       return h('i', {}, name)
     }
   }
