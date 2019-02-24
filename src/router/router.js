@@ -33,5 +33,10 @@ export default [
     path: '/split-pane',
     name: 'split_pane',
     component: () => import('@/views/split-pane.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login.vue')
   }
 ]
