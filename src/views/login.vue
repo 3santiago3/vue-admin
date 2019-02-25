@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input v-model="userName" />
+    <input v-model="username" />
     <input type="password" v-model="password" />
     <button @click="handleSubmit">登录</button>
   </div>
@@ -13,7 +13,7 @@ export default {
   name: 'login',
   data () {
     return {
-      userName: '',
+      username: '',
       password: ''
     }
   },
@@ -23,8 +23,14 @@ export default {
     ]),
     handleSubmit () {
       this.login({
-        userName: this.userName,
+        username: this.username,
         password: this.password
+      }).then(() => {
+        this.$router.push({
+          name: 'home'
+        })
+      }).catch(error => {
+        console.log(error)
       })
     }
   }
