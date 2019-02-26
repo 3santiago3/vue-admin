@@ -1,28 +1,29 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <button
-      type="button"
-      @click="getUserInfo"
-    >获取个人信息</button>
-    <button
-      type="button"
-      @click="handleLogout"
-    >退出登录</button>
+    <Row>
+      <i-col></i-col>
+    </Row>
+
+    <Row :gutter="10">
+      <i-col :span="12"></i-col>
+      <i-col :span="12"></i-col>
+    </Row>
+
+    <Row :gutter="10">
+      <i-col :span="4" offset="2"></i-col>
+      <i-col :span="4"></i-col>
+      <i-col :span="4"></i-col>
+    </Row>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '_c/HelloWorld.vue'
 import { getUserInfo } from '@/api/user'
 import { mapActions } from 'vuex'
 
 export default {
   name: 'home',
-  components: {
-    HelloWorld
-  },
   methods: {
     ...mapActions([
       'logout'
@@ -43,3 +44,18 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+.home {
+  .ivu-row {
+    &+.ivu-row {
+      margin-top: 10px;
+    }
+    .ivu-col {
+      height: 50px;
+      background-color: lightpink;
+      background-clip: content-box;
+    }
+  }
+}
+</style>

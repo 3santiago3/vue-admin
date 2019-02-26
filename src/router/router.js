@@ -1,10 +1,17 @@
-import Home from '@/views/Home.vue'
+import Layout from '@/views/layout.vue'
 
 export default [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'layout',
+    component: Layout,
+    children: [
+      {
+        path: 'home',
+        name: 'home',
+        component: () => import('@/views/Home.vue')
+      }
+    ]
   },
   {
     path: '/about',
@@ -29,11 +36,7 @@ export default [
     name: 'render_page',
     component: () => import('@/views/render-page.vue')
   },
-  {
-    path: '/split-pane',
-    name: 'split_pane',
-    component: () => import('@/views/split-pane.vue')
-  },
+
   {
     path: '/login',
     name: 'login',
