@@ -5,7 +5,12 @@
       collapsible
       hide-trigger
       breakpoint="sm"
-    ></Sider>
+    >
+      <side-menu
+        :collapsed="collapsed"
+        :list="menuList"
+      />
+    </Sider>
     <Layout>
       <Header class="header-wrapper">
         <Icon
@@ -28,11 +33,36 @@
 </template>
 
 <script>
+import SideMenu from '_c/side-menu'
+
 export default {
   name: 'layout',
+  components: {
+    SideMenu
+  },
   data () {
     return {
-      collapsed: false
+      collapsed: false,
+      menuList: [
+        { title: '1', name: 'menu1', icon: 'ios-alarm' },
+        { title: '2', name: 'menu2', icon: 'ios-alarm' },
+        { title: '3',
+          name: 'menu3',
+          icon: 'ios-alarm',
+          children: [
+            { title: '3-1', name: 'menu3-1', icon: 'ios-alarm' },
+            { title: '3-2', name: 'menu3-2', icon: 'ios-alarm' },
+            { title: '3-3',
+              name: 'menu3-3',
+              icon: 'ios-alarm',
+              children: [
+                { title: '3-3-1', name: 'menu3-3-1', icon: 'ios-alarm' },
+                { title: '3-3-2', name: 'menu13-3-2', icon: 'ios-alarm' }
+              ] },
+            { title: '3-4', name: 'menu3-4', icon: 'ios-alarm' }
+          ] },
+        { title: '4', name: 'menu4', icon: 'ios-alarm' }
+      ]
     }
   },
   computed: {
