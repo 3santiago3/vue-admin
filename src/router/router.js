@@ -27,6 +27,11 @@ export default [
     component: () => import('@/views/count-to.vue')
   },
   {
+    path: '/table',
+    name: 'table',
+    component: () => import('@/views/table.vue')
+  },
+  {
     path: '/menu-page',
     name: 'menu_page',
     component: () => import('@/views/menu-page.vue')

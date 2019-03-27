@@ -4,9 +4,9 @@ import router from './router'
 import store from './store'
 import './plugins/iview.js'
 
-// if (!process.env.NODE_ENV !== 'production') {
-//   require('./mock')
-// }
+if (process.env.NODE_ENV !== 'production') {
+  require('./mock')
+}
 
 Vue.config.productionTip = false
 
